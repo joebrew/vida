@@ -17,8 +17,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Long to-do list
 
 - Recruit collaborators.  
-- Finish the hard-coding of dictionaries.  
+- Get more data examples.  
 - Get user input on concept and approach.  
+- Finish the hard-coding of dictionaries.  
 - Get user input on application interface. 
 - Devise user-data capture method for ML approach.  
 

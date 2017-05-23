@@ -18,8 +18,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### For expert users
 
-A code base (in R; Stata, SAS, and Python to come) for the “translation” of verbal autopsy data from one standard to another.
+A code base (R package; Python and others to come) for the “translation” of verbal autopsy data from one standard to another.
 
 ### For all users 
 
-An interactive web application for the translation of datasets from one standard to another.
+An interactive web application for the translation of datasets from one standard to another (currently in Shiny/R; will port to Flask/Python depending on needs).
+
+## Web application
+
+<iframe src="https://joebrew.shinyapps.io/vida"></iframe>

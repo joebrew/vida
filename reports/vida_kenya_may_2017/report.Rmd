@@ -19,6 +19,9 @@ options(scipen=999)
 library(databrew)
 library(stringr)
 library(cism)
+library(dplyr)
+library(ggplot2)
+library(RColorBrewer)
 
 # Basic knitr options
 knitr::opts_chunk$set(comment = NA, 

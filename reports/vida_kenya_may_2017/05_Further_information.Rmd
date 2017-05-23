@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Resources
 
-www.africanhealtheconomics.com  
+https://africanhealtheconomics.com  
 https://joebrew.shinyapps.io/vida  
 https://github.com/joebrew/vida  
 
@@ -24,5 +24,5 @@ https://github.com/joebrew/vida
 
 Joe Brew  
 joebrew@gmail.com  
-Institut de Salut Global de Barcelona (Spain)  
 Centro de Investigação em Saude de Manhiça (Mozambique)
+Institut de Salut Global de Barcelona (Spain)  

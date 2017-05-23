@@ -24,7 +24,4 @@ We can't fix.
 
 We can.
 
-## We can do it
-
-In most cases, data from different sources are compatible. In other words, the content is joinable, but differences in form prevent data from being joined.
 
