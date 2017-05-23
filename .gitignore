@@ -1,3 +1,7 @@
 .Rproj.user
 .Rhistory
 .RData
+dictionaries/Kenya/*.xlsx
+dictionaries/Kenya/*.xls
+dictionaries/Gambia/*.xlsx
+dictionaries/Mali/*.csv
