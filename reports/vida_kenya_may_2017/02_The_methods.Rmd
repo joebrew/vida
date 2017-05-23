@@ -1,0 +1,62 @@
+---
+fig_height: 2.6
+fig_width: 4
+output:
+  html_document:
+    pandoc_args: [
+      "+RTS", "-K16000m",
+      "-RTS"
+    ]
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Two end languages
+
+- Another standard (different variables and values, ie, "computer-speak")
+- Meaningful phrases (questions and answers, ie "human-speak")
+
+## Translation to another standard
+
+- Generally, the purpose wil be to prepare data for SmartVA.
+- Can also be used to combine datasets of different standards for ad-hoc analysis. 
+
+## Translation to meaningful phrases
+
+- "child10019" becomes "What was the sex of the deceased?"
+- 1 becomes "female"  
+- 2 becomes "male"
+
+## Two kinds of translation
+
+- The "clean" method
+- The "fuzzy" method
+
+
+## The clean method
+
+- Translation is easiest when we are translating to a known standard (language) to another known standard.
+
+
+## The clean method
+
+- But this means explicitly engineering each standard (dictionary writing)
+
+```
+{"Symptoms1":"symptoms", "Q527A":"q148b", "Q601A_3":"q600x"}
+```
+
+- This is time-consuming and non-automatable  
+
+
+## The fuzzy method
+
+- Employ approximate string matching to make a "best guess" at what each field is.  
+- Imperfect, but fast.  
+- Currently using Jaro-Winker distance.
+- Employing user confirmation will allow us to train a machine learning model to improve the algorithm's performance.
+
+

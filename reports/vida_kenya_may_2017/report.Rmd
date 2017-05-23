@@ -1,12 +1,11 @@
 ---
-title: "Presentation title"
+title: "Verbal autopsy data standardization"
 author: "Joe Brew"
 date: "May 2017"
 fig_height: 2.6
 fig_width: 4
 output: 
   ioslides_presentation: 
-    logo: ../images/logo.png
     transition: slower
 ---
 

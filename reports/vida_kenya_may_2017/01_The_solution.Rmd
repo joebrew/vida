@@ -1,0 +1,30 @@
+---
+fig_height: 2.6
+fig_width: 4
+output:
+  html_document:
+    pandoc_args: [
+      "+RTS", "-K16000m",
+      "-RTS"
+    ]
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## We can fix form, not content
+
+### Content
+
+We can't fix.
+
+### Form
+
+We can.
+
+## We can do it
+
+In most cases, data from different sources are compatible. In other words, the content is joinable, but differences in form prevent data from being joined.
+

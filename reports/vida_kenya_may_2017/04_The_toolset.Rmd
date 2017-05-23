@@ -1,0 +1,25 @@
+---
+fig_height: 2.6
+fig_width: 4
+output:
+  html_document:
+    pandoc_args: [
+      "+RTS", "-K16000m",
+      "-RTS"
+    ]
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## 2 tools
+
+### For expert users
+
+A code base (in R; Stata, SAS, and Python to come) for the “translation” of verbal autopsy data from one standard to another.
+
+### For all users 
+
+An interactive web application for the translation of datasets from one standard to another.

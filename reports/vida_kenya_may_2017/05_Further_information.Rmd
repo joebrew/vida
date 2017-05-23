@@ -1,0 +1,28 @@
+---
+fig_height: 2.6
+fig_width: 4
+output:
+  html_document:
+    pandoc_args: [
+      "+RTS", "-K16000m",
+      "-RTS"
+    ]
+---
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Resources
+
+www.africanhealtheconomics.com  
+https://joebrew.shinyapps.io/vida  
+https://github.com/joebrew/vida  
+
+## Contact
+
+Joe Brew  
+joebrew@gmail.com  
+Institut de Salut Global de Barcelona (Spain)  
+Centro de Investigação em Saude de Manhiça (Mozambique)
