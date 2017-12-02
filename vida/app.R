@@ -8,6 +8,9 @@ library(ggplot2)
 library(sp)
 library(leaflet)
 library(RColorBrewer)
+library(readr)
+
+source('global.R')
 
 # UI --------------------------------------------------------------
 ui <-
@@ -34,16 +37,20 @@ ui <-
                       helpText('Note that header-less data is not recommended, as it will have to employ fuzzy matching of values only.'),
                       h3('Choose your translation strategy'),
                       radioButtons('strategy', 'Translation strategy',
-                                   c(Fuzzy='fuzzy',
+                                   choices = c(Fuzzy='fuzzy',
                                      Direct='direct'),
-                                   ','),
+                                   selected = 'direct'),
                       selectInput('source_standard', 'Source standard',
-                                  choices = c('Kenya 2007',
-                                              'Gambia 2012')),
+                                  choices = c('WHO 2016',
+                                              'WHO 2012',
+                                              'WHO 2007'),
+                                  selected = 'WHO 2012'),
                       selectInput('destination_standard', 'Destination standard',
                                   choices = c('WHO 2016',
                                               'WHO 2012',
-                                              'WHO 2007')),
+                                              'WHO 2007',
+                                              'Human-speak'),
+                                  selected = 'WHO 2016'),
                       tags$hr(),
                       sliderInput('fuzzy_acceptable',
                                   'What is your fuzziness threshold?',
@@ -85,27 +92,39 @@ server <-
   
   function(input, output){
     
+    input_data <- reactive({
+      inFile <- input$file1
+      
+      if (is.null(inFile))
+        return(NULL)
+      
+      read_csv(inFile$datapath)
+    })
+    
+    output_data <- reactive({
+      gambia_translated
+      # inFile <- input$file1
+      # 
+      # if (is.null(inFile))
+      #   return(NULL)
+      # 
+      # gambia_translated
+    })
     
     output$download_csv <- downloadHandler(
       filename = paste('data-', Sys.Date(), '.csv', sep=''),
       content = function(file) {
-        x <- data_frame(a = 1:5,
-                        b = 1:5,
-                        d = 1:5)
-        write.csv(x, file)
+        x <- output_data()
+        write_csv(x, file)
       }
     )
     
     output$table_1 <- renderDataTable({
-      data_frame(a = 1:5,
-                 b = 6:10,
-                 d = letters[1:5])
+      head(input_data())
     })
     
     output$table_2 <- renderDataTable({
-      data_frame(a = 1:5,
-                 b = 6:10,
-                 d = letters[1:5])
+      head(gambia_translated)
     })
     
     # # Render PDF from Rmd

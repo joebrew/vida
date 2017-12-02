@@ -1,0 +1,185 @@
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa">
+  <h:head>
+    <h:title>Mali</h:title>
+    <model>
+      <instance>
+        <data id="build_Mali_1512217839">
+          <meta>
+            <instanceID/>
+          </meta>
+          <subject_id/>
+          <visit_date/>
+          <start_time/>
+          <child_dob/>
+          <gender/>
+          <child_dod/>
+          <age/>
+          <dss_id/>
+          <outcome/>
+          <outcome_spec/>
+          <int_code/>
+          <qc_code/>
+          <qc_date/>
+          <subject_idb/>
+          <relationship/>
+          <live_with/>
+          <where_died/>
+        </data>
+      </instance>
+      <itext>
+        <translation lang="English">
+          <text id="/data/subject_id:label">
+            <value>Subject ID</value>
+          </text>
+          <text id="/data/visit_date:label">
+            <value>Visit date</value>
+          </text>
+          <text id="/data/start_time:label">
+            <value>Start time</value>
+          </text>
+          <text id="/data/child_dob:label">
+            <value>Child's date of birth</value>
+          </text>
+          <text id="/data/gender:label">
+            <value>Gender</value>
+          </text>
+          <text id="/data/gender:option0">
+            <value>Male</value>
+          </text>
+          <text id="/data/gender:option1">
+            <value>Female</value>
+          </text>
+          <text id="/data/child_dod:label">
+            <value>Child's date of death</value>
+          </text>
+          <text id="/data/age:label">
+            <value>Age (in days)</value>
+          </text>
+          <text id="/data/dss_id:label">
+            <value>DSS ID</value>
+          </text>
+          <text id="/data/outcome:label">
+            <value>Outcome</value>
+          </text>
+          <text id="/data/outcome_spec:label">
+            <value>Outcome Specification</value>
+          </text>
+          <text id="/data/int_code:label">
+            <value>Interviewer's name code</value>
+          </text>
+          <text id="/data/qc_code:label">
+            <value>Quality control's name code</value>
+          </text>
+          <text id="/data/qc_date:label">
+            <value>Quality control date</value>
+          </text>
+          <text id="/data/subject_idb:label">
+            <value>Subject ID</value>
+          </text>
+          <text id="/data/relationship:label">
+            <value>Relationship</value>
+          </text>
+          <text id="/data/live_with:label">
+            <value>Did you live with the deceased at time of death?</value>
+          </text>
+          <text id="/data/live_with:option0">
+            <value>Yes</value>
+          </text>
+          <text id="/data/live_with:option1">
+            <value>No</value>
+          </text>
+          <text id="/data/where_died:label">
+            <value>Where died?</value>
+          </text>
+        </translation>
+      </itext>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" calculate="concat('uuid:', uuid())"/>
+      <bind nodeset="/data/subject_id" type="string" required="true()"/>
+      <bind nodeset="/data/visit_date" type="date" required="true()"/>
+      <bind nodeset="/data/start_time" type="time"/>
+      <bind nodeset="/data/child_dob" type="date"/>
+      <bind nodeset="/data/gender" type="select"/>
+      <bind nodeset="/data/child_dod" type="date"/>
+      <bind nodeset="/data/age" type="int"/>
+      <bind nodeset="/data/dss_id" type="string"/>
+      <bind nodeset="/data/outcome" type="string"/>
+      <bind nodeset="/data/outcome_spec" type="string"/>
+      <bind nodeset="/data/int_code" type="int"/>
+      <bind nodeset="/data/qc_code" type="int"/>
+      <bind nodeset="/data/qc_date" type="date"/>
+      <bind nodeset="/data/subject_idb" type="string"/>
+      <bind nodeset="/data/relationship" type="int"/>
+      <bind nodeset="/data/live_with" type="select1"/>
+      <bind nodeset="/data/where_died" type="int"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/data/subject_id">
+      <label ref="jr:itext('/data/subject_id:label')"/>
+    </input>
+    <input ref="/data/visit_date">
+      <label ref="jr:itext('/data/visit_date:label')"/>
+    </input>
+    <input ref="/data/start_time">
+      <label ref="jr:itext('/data/start_time:label')"/>
+    </input>
+    <input ref="/data/child_dob">
+      <label ref="jr:itext('/data/child_dob:label')"/>
+    </input>
+    <select ref="/data/gender">
+      <label ref="jr:itext('/data/gender:label')"/>
+      <item>
+        <label ref="jr:itext('/data/gender:option0')"/>
+        <value>Male</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/gender:option1')"/>
+        <value>Female</value>
+      </item>
+    </select>
+    <input ref="/data/child_dod">
+      <label ref="jr:itext('/data/child_dod:label')"/>
+    </input>
+    <input ref="/data/age">
+      <label ref="jr:itext('/data/age:label')"/>
+    </input>
+    <input ref="/data/dss_id">
+      <label ref="jr:itext('/data/dss_id:label')"/>
+    </input>
+    <input ref="/data/outcome">
+      <label ref="jr:itext('/data/outcome:label')"/>
+    </input>
+    <input ref="/data/outcome_spec">
+      <label ref="jr:itext('/data/outcome_spec:label')"/>
+    </input>
+    <input ref="/data/int_code">
+      <label ref="jr:itext('/data/int_code:label')"/>
+    </input>
+    <input ref="/data/qc_code">
+      <label ref="jr:itext('/data/qc_code:label')"/>
+    </input>
+    <input ref="/data/qc_date">
+      <label ref="jr:itext('/data/qc_date:label')"/>
+    </input>
+    <input ref="/data/subject_idb">
+      <label ref="jr:itext('/data/subject_idb:label')"/>
+    </input>
+    <input ref="/data/relationship">
+      <label ref="jr:itext('/data/relationship:label')"/>
+    </input>
+    <select1 ref="/data/live_with">
+      <label ref="jr:itext('/data/live_with:label')"/>
+      <item>
+        <label ref="jr:itext('/data/live_with:option0')"/>
+        <value>Yes</value>
+      </item>
+      <item>
+        <label ref="jr:itext('/data/live_with:option1')"/>
+        <value>No</value>
+      </item>
+    </select1>
+    <input ref="/data/where_died">
+      <label ref="jr:itext('/data/where_died:label')"/>
+    </input>
+  </h:body>
+</h:html>
