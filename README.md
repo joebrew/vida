@@ -3,6 +3,29 @@ VIDA VA data standardization
 
 ## Objective
 
+Create a data dictionary which maps the column names AND coded response values from two different datasets so that they can be combined.
+
+## Datasets 
+
+- Gambia neonate (the `Neonate_VA` tab in `Gambia Site VA Data Dictionary_INDEPTH CRFs.xlsx`)
+- Kenya (the `va data dictionary` tab in `Kenya VA DICTIONARY.xlsx`)
+
+## Product  
+
+This `kenya_answer` and `kenya_variable` columns in [this spreadsheet](https://docs.google.com/spreadsheets/d/1V5UnXJTeQtKVay8PDxzNjzI4d1DzwOqcn763oFfD740/edit?usp=sharing) will be filled out.
+
+## Method  
+
+Open the Kenya data (the `va data dictionary` tab in `Kenya VA DICTIONARY.xlsx`) and try to find the equivalent variables and answer codes. When found, fill out the `kenya_variable` and `kenya_answer_code` columns in the above linked spreadsheet. When not found, write `TRUE` in the `no_equivalent` column.
+
+====================
+
+(Don't read below this line)
+
+# Old stuff
+
+## Objective
+
 The objective of this project is to take verbal autopsy data from 3 different countries with multiple data formats and to standardize to the 2016 WHO VA format.
 
 ## Data sources
@@ -40,3 +63,16 @@ The Kenya site has used four forms:
 - Mali: from 2012 to 2015, stopped (no data). re-started dec 1 2015 (but deaths were from may 2015)
 - Mali: follow-up with Quique to get adjudication data ()
     - Build redcap form for Mali 2007
+    
+### QUESTIONS
+- Has Kenya switched / will they switch to 2016 WHO format?
+	- AR: they should be updating their form, talk to Alan Audi (cc Richard)
+- Sarwar / Jahangir: have they given data to Anna?
+- Did Mali indeed switch to 2016 WHO at end of June? I need example of this.
+	- Write to Uma re: this
+- Redcap app for Mali 2007; I've started building with ODK. Is that okay?
+- Mali data entry app: 
+	- Send ODK xml forms and server configuration documentation to Uma.
+
+### Karen
+- Quique suggestion: adjudicate all cases and controls, and 10% of DSS
