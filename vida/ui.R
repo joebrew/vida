@@ -13,7 +13,7 @@ library(readr)
 
 navbarPage(
   title = 'Verbal autopsy standardization tool',
-  theme = shinytheme("flatly"),
+  theme = shinytheme("united"),
   
   # tabsetPanel(
   tabPanel('Tool',
@@ -47,7 +47,7 @@ navbarPage(
                                             'WHO 2012',
                                             'WHO 2007',
                                             'Human-speak'),
-                                selected = 'WHO 2016'),
+                                selected = 'Human-speak'),
                     tags$hr(),
                     sliderInput('fuzzy_acceptable',
                                 'What is your fuzziness threshold?',
@@ -74,11 +74,10 @@ navbarPage(
                     # plotOutput('user_plot'),
                     h3('Output data preview'),
                     dataTableOutput('table_2')
-                    # dataTableOutput('user_table'),
-                    # dataTableOutput("point_table")
                     
              ))),#,
   tabPanel('About',
+           h2('Vida'),
            p('Some text'))
   #          includeMarkdown('includes/about.md'))
 )

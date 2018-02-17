@@ -10,9 +10,10 @@ library(leaflet)
 library(RColorBrewer)
 library(readr)
 
-source('global.R')
 
 function(input, output){
+  source('global.R')
+  
   
   input_data <- reactive({
     inFile <- input$file1
@@ -25,11 +26,11 @@ function(input, output){
 
   output_data <- reactive({
     inFile <- input$file1
-    
-    if (is.null(inFile))
+    if (is.null(inFile)){
       return(NULL)
-    
-    gambia_translated
+    } else {
+      return(gambia_translated)
+    }
   })
   
   
@@ -42,11 +43,22 @@ function(input, output){
   )
   
   output$table_1 <- renderDataTable({
+    inFile <- input$file1
+    if (is.null(inFile))
+      return(NULL)
     head(input_data())
   })
   
   output$table_2 <- renderDataTable({
+    inFile <- input$file1
+    if (is.null(inFile))
+      return(NULL)
     x <- output_data()
+    head(x)
+    x <- data.frame(x)
+    x <- x[,!grepl('na', tolower(names(x)))]
+    # head(gambia_translated)
+    # head(gambia_in_depth)
     head(x)
   })
   
